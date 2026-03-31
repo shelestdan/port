@@ -15,6 +15,14 @@ const offerTitles: Record<OfferPackage["id"], string> = {
   service: "Когда нужен сервис"
 };
 
+const isGitHubPages = process.env.NEXT_PUBLIC_DEPLOY_TARGET === "github-pages";
+const repoName = process.env.NEXT_PUBLIC_REPO_NAME;
+const assetBasePath = isGitHubPages && repoName ? `/${repoName}` : "";
+
+function withAssetBasePath(path: string) {
+  return `${assetBasePath}${path}`;
+}
+
 function SectionLabel({ children }: { children: ReactNode }) {
   return <p className="eyebrow">{children}</p>;
 }
@@ -29,7 +37,7 @@ function ExampleProjectCard({ item }: { item: ExampleCard }) {
     >
       <div className="real-card__media">
         <Image
-          src={item.image}
+          src={withAssetBasePath(item.image)}
           alt={item.alt}
           width={1440}
           height={980}
