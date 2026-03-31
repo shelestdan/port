@@ -26,6 +26,12 @@ export type ComparisonRow = {
   service: string;
 };
 
+export type ServiceCommerceSection = {
+  eyebrow: string;
+  title: string;
+  description: string;
+};
+
 export const pageIntro = {
   eyebrow: "Сайт / сервис под ключ",
   title: "Два формата под задачу бизнеса: витрина или рабочий инструмент.",
@@ -48,7 +54,7 @@ export const comparisonRows: ComparisonRow[] = [
     label: "Что внутри",
     site: "Информация о компании, услугах, товарах, кейсах, формах и контактах.",
     service:
-      "Личный кабинет, роли, таблицы, статусы, формы, данные и автоматизация."
+      "Личный кабинет, роли, каталог, корзина, заказы, статусы, данные и автоматизация."
   },
   {
     label: "Когда подходит",
@@ -86,6 +92,7 @@ export const offerPackages: OfferPackage[] = [
     bullets: [
       "Карта ролей, сценариев и структуры внутренних экранов.",
       "Кабинеты, таблицы, формы, статусы, фильтры и рабочие потоки.",
+      "Каталог, карточка товара, корзина, аккаунт, заказы и сценарии покупки.",
       "Интеграция бизнес-логики, действий с данными и автоматизаций.",
       "Структура, рассчитанная на развитие, поддержку и следующие этапы."
     ],
@@ -159,6 +166,49 @@ export const exampleCards: ExampleCard[] = [
     alt: "Реальный сервис Trello с интерфейсом задач и мобильным сценарием.",
     url: "https://trello.com/",
     source: "trello.com"
+  }
+];
+
+export const serviceCommerceSection: ServiceCommerceSection = {
+  eyebrow: "E-commerce сервис",
+  title: "Красивый интернет-магазин с корзиной и личным кабинетом — это тоже сервисный уровень.",
+  description:
+    "Если в проекте есть каталог, карточка товара, корзина, логин, профиль пользователя, история заказов, статусы и checkout, это уже не просто презентационный сайт, а полноценный e-commerce сервис."
+};
+
+export const serviceCommerceCards: ExampleCard[] = [
+  {
+    id: "service-apple-store",
+    category: "service",
+    title: "Apple Store",
+    description:
+      "Один из самых сильных мировых e-commerce референсов: премиальная подача, конфигураторы, bag, account и очень чистый shopping flow.",
+    image: "/examples/real/service-apple-store.png",
+    alt: "Apple Store с интерфейсом интернет-магазина, bag и shopping flow.",
+    url: "https://www.apple.com/us/shop",
+    source: "apple.com/shop"
+  },
+  {
+    id: "service-nike-shop",
+    category: "service",
+    title: "Nike",
+    description:
+      "Сильный fashion e-commerce: каталог, size selection, bag, favorites, member account и аккуратный мобильный сценарий покупки.",
+    image: "/examples/real/service-nike-shop.png",
+    alt: "Nike Shop с каталогом товаров и shopping интерфейсом.",
+    url: "https://www.nike.com/w/mens-shoes-nik1zy7ok",
+    source: "nike.com"
+  },
+  {
+    id: "service-zara-shop",
+    category: "service",
+    title: "Zara",
+    description:
+      "Очень сильный визуальный e-commerce: быстрый каталог, bag, account, заказный сценарий и чистая редакционная подача магазина.",
+    image: "/examples/real/service-zara-shop.png",
+    alt: "Zara с визуальным каталогом интернет-магазина и shopping flow.",
+    url: "https://www.zara.com/us/en/woman-new-in-l1180.html",
+    source: "zara.com"
   }
 ];
 

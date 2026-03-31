@@ -6,6 +6,8 @@ import {
   exclusionNote,
   offerPackages,
   pageIntro,
+  serviceCommerceCards,
+  serviceCommerceSection,
   type ExampleCard,
   type OfferPackage
 } from "@/src/content/offers";
@@ -72,10 +74,12 @@ function ExampleProjectCard({ item }: { item: ExampleCard }) {
 
 function OfferSection({
   offer,
-  examples
+  examples,
+  commerceExamples
 }: {
   offer: OfferPackage;
   examples: ExampleCard[];
+  commerceExamples?: ExampleCard[];
 }) {
   return (
     <section id={offer.id} className="section-shell py-8 md:py-10">
@@ -109,6 +113,29 @@ function OfferSection({
             <ExampleProjectCard key={item.id} item={item} />
           ))}
         </div>
+
+        {commerceExamples?.length ? (
+          <div className="mt-8 space-y-5 border-t border-black/8 pt-6">
+            <div className="grid gap-4 md:grid-cols-[0.95fr_1.05fr] md:items-end">
+              <div className="space-y-2">
+                <SectionLabel>{serviceCommerceSection.eyebrow}</SectionLabel>
+                <p className="font-display text-[clamp(1.45rem,2vw,2rem)] leading-[1.08] tracking-[-0.04em] text-black">
+                  {serviceCommerceSection.title}
+                </p>
+              </div>
+
+              <p className="max-w-xl text-sm leading-7 text-black/58 md:justify-self-end md:text-base">
+                {serviceCommerceSection.description}
+              </p>
+            </div>
+
+            <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+              {commerceExamples.map((item) => (
+                <ExampleProjectCard key={item.id} item={item} />
+              ))}
+            </div>
+          </div>
+        ) : null}
 
         <ul className="mt-6 grid gap-3 md:grid-cols-2">
           {offer.bullets.map((bullet) => (
@@ -193,7 +220,11 @@ export default function Home() {
       </section>
 
       <OfferSection offer={siteOffer} examples={siteExamples} />
-      <OfferSection offer={serviceOffer} examples={serviceExamples} />
+      <OfferSection
+        offer={serviceOffer}
+        examples={serviceExamples}
+        commerceExamples={serviceCommerceCards}
+      />
 
       <section className="section-shell pt-6">
         <div className="note-strip">

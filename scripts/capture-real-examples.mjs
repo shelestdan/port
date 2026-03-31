@@ -13,7 +13,10 @@ const entries = [
   { slug: "site-apple", url: "https://www.apple.com/macbook-air/" },
   { slug: "service-linear", url: "https://linear.app/" },
   { slug: "service-trello", url: "https://trello.com/" },
-  { slug: "service-notion", url: "https://www.notion.so/product" }
+  { slug: "service-notion", url: "https://www.notion.so/product" },
+  { slug: "service-apple-store", url: "https://www.apple.com/us/shop" },
+  { slug: "service-nike-shop", url: "https://www.nike.com/w/mens-shoes-nik1zy7ok" },
+  { slug: "service-zara-shop", url: "https://www.zara.com/us/en/woman-new-in-l1180.html" }
 ];
 
 const cleanupCss = `
