@@ -1,28 +1,32 @@
 {
-  "name": "portfolio-presentation",
+  "name": "logistics-rate-dashboard",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint ."
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "next": "latest",
+    "@vitejs/plugin-react": "latest",
+    "framer-motion": "latest",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "recharts": "latest",
+    "vite": "latest"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "latest",
+    "@eslint/js": "latest",
     "@tailwindcss/postcss": "latest",
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "eslint": "latest",
-    "eslint-config-next": "latest",
     "tailwindcss": "latest",
+    "typescript-eslint": "latest",
     "typescript": "latest"
   }
 }
-

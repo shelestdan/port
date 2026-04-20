@@ -1,6 +1,19 @@
-import nextCoreWebVitals from "eslint-config-next/core-web-vitals";
-import nextTypescript from "eslint-config-next/typescript";
+import js from "@eslint/js";
+import tseslint from "typescript-eslint";
 
-const eslintConfig = [...nextCoreWebVitals, ...nextTypescript];
-
-export default eslintConfig;
+export default [
+  js.configs.recommended,
+  ...tseslint.configs.recommended,
+  {
+    ignores: ["dist", "node_modules", "out", ".next", "coverage", "scripts"]
+  },
+  {
+    files: ["**/*.{ts,tsx}"],
+    languageOptions: {
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname
+      }
+    }
+  }
+];
