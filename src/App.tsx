@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const heroStats = [
   { value: "Next.js + React", label: "рекомендуемый стек" },
   { value: "Личный кабинет", label: "регистрация, бонусы, QR-карта" },
-  { value: "12 месяцев", label: "гарантия и поддержка" }
+  { value: "2 месяца", label: "гарантия и поддержка" }
 ] as const;
 
 const siteSections = [
@@ -89,7 +89,7 @@ const priceTerms = [
   "Отдельная админ-панель под ключевые задачи администратора",
   "Адаптивный дизайн, SEO-база, аналитика, формы, карта АЗС",
   "Обучение сотрудников после сдачи проекта",
-  "12 месяцев гарантии и технической поддержки"
+  "2 месяца гарантии и технической поддержки"
 ] as const;
 
 const reveal = {
@@ -117,9 +117,6 @@ export default function App() {
           <a href="#price">Стоимость</a>
         </nav>
 
-        <a className="proposal-nav__cta" href="#price">
-          60 000 ₽
-        </a>
       </header>
 
       <main id="top">
@@ -333,7 +330,7 @@ export default function App() {
           </div>
 
           <div className="price-cta">
-            <a className="button button--solid" href="mailto:hello@tatgazservice.local">
+            <a className="button button--solid" href="mailto:daniil.shelesteev@yandex.ru">
               Подтвердить старт
             </a>
             <p>Сделаю проект на высшем уровне, с упором на доверие бренду, повторные визиты и управляемую лояльность.</p>
