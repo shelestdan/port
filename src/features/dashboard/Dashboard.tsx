@@ -5,7 +5,6 @@ import { KpiStrip } from "../../components/KpiStrip";
 import { RouteEditorPanel } from "../../components/RouteEditorPanel";
 import { RouteTable } from "../../components/RouteTable";
 import { Toolbar } from "../../components/Toolbar";
-import { fescoTerms } from "../../data/demoRoutes";
 import { usePersistentRoutes } from "../../hooks/usePersistentRoutes";
 import type { Currency, RouteFilters, RouteRecord } from "../../types/logistics";
 import { getKpis, getRouteComparisons } from "../../utils/analytics";
@@ -32,9 +31,9 @@ function createBlankRecord(): RouteRecord {
     cost: 0,
     currency: "RUB",
     transit_days: 0,
-    additional_expenses: "",
     updated_at: todayISO(),
-    comment: ""
+    comment: "",
+    additional_expenses: ""
   };
 }
 
@@ -175,20 +174,6 @@ export function Dashboard() {
         onSave={saveRecord}
         onDelete={removeRecord}
       />
-
-      <section className="terms-panel" aria-label="Общие условия FESCO">
-        <details>
-          <summary>
-            <span>Общие условия FESCO</span>
-            <strong>Показать полный текст допрасходов и ограничений</strong>
-          </summary>
-          <ol>
-            {fescoTerms.map((term) => (
-              <li key={term}>{term}</li>
-            ))}
-          </ol>
-        </details>
-      </section>
     </main>
   );
 }
