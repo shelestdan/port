@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 import { demoRoutes } from "../data/demoRoutes";
 import type { RouteRecord } from "../types/logistics";
 
-const STORAGE_KEY = "freight-dashboard-routes-v3";
+const STORAGE_KEY = "freight-dashboard-routes-v2";
 
 function readInitialRoutes() {
   if (typeof window === "undefined") {

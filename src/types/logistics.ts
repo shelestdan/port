@@ -16,7 +16,6 @@ export interface RouteRecord {
   cost: number;
   currency: Currency;
   transit_days: number;
-  additional_expenses: string;
   updated_at: string;
   comment: string;
 }
