@@ -1,4 +1,4 @@
-export type TransportType = "rail_direct" | "sea";
+export type TransportType = "rail_direct" | "rail_domestic" | "sea";
 
 export type Currency = "RUB" | "USD" | "CNY" | "EUR";
 
@@ -18,6 +18,7 @@ export interface RouteRecord {
   transit_days: number;
   updated_at: string;
   comment: string;
+  additional_expenses: string;
 }
 
 export interface RouteFilters {
