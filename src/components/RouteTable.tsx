@@ -35,6 +35,7 @@ const columns: { key: SortKey; label: string }[] = [
   { key: "cost", label: "Стоимость" },
   { key: "currency", label: "Валюта" },
   { key: "transit_days", label: "Дни" },
+  { key: "additional_expenses", label: "Доп. расходы" },
   { key: "updated_at", label: "Дата" },
   { key: "comment", label: "Комментарий" }
 ];
@@ -152,6 +153,9 @@ export function RouteTable({
                   </td>
                   <td>
                     <EditableCell value={record.transit_days} type="number" ariaLabel="transit_days" onCommit={(value) => onUpdate(record.id, { transit_days: Number(value) || 0 })} />
+                  </td>
+                  <td className="long-text-cell">
+                    <EditableCell value={record.additional_expenses} ariaLabel="additional_expenses" onCommit={(value) => onUpdate(record.id, { additional_expenses: value })} />
                   </td>
                   <td>
                     <EditableCell value={record.updated_at} type="date" ariaLabel="updated_at" onCommit={(value) => onUpdate(record.id, { updated_at: value })} />

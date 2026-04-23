@@ -414,6 +414,47 @@ h2 {
   padding: 1rem;
 }
 
+.terms-panel {
+  margin-top: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  padding: 1rem;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+}
+
+.terms-panel summary {
+  display: grid;
+  gap: 0.2rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+.terms-panel summary::-webkit-details-marker {
+  display: none;
+}
+
+.terms-panel summary span {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.terms-panel summary strong {
+  font-size: 1rem;
+}
+
+.terms-panel ol {
+  display: grid;
+  gap: 0.55rem;
+  margin: 1rem 0 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
 .table-head span {
   border-radius: 8px;
   background: rgba(43, 127, 255, 0.1);
@@ -431,7 +472,7 @@ h2 {
 
 table {
   width: 100%;
-  min-width: 1680px;
+  min-width: 1900px;
   border-collapse: collapse;
 }
 
@@ -489,8 +530,11 @@ tbody tr:hover {
   border: 1px solid transparent;
   background: transparent;
   color: var(--ink);
+  overflow: hidden;
   padding: 0.36rem;
   text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .editable-value:hover {
@@ -533,6 +577,22 @@ tbody tr:hover {
   display: block;
   margin-top: 0.2rem;
   font-size: 0.72rem;
+}
+
+.long-text-cell {
+  width: 340px;
+  max-width: 340px;
+}
+
+.long-text-cell .editable-value {
+  display: -webkit-box;
+  min-width: 280px;
+  max-width: 320px;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  white-space: normal;
+  line-height: 1.35;
 }
 
 .delete-row {
