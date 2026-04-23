@@ -14,6 +14,7 @@ const csvFields: (keyof RouteRecord)[] = [
   "cost",
   "currency",
   "transit_days",
+  "additional_expenses",
   "updated_at",
   "comment"
 ];
